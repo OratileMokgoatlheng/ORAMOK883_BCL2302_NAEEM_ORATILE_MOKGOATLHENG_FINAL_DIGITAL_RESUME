@@ -1,23 +1,28 @@
+/* My font famile for the whole code */
 body{
     font-family:'Times New Roman', Times, serif;
     background-color: #40483a;
 }
 /* ---------------------------------------HEADER---------------------- */
+/* Centers flexboxes */
 .pictures, .name{
     text-align: center;
     color: rgb(255, 255, 255);
 }
 
+/* Sizes the border radius of my profile picture */
 .pictures img{
     border: 2px solid rgb(248, 248, 248);
     border-radius: 50%;
 }
 
-
+/* Flexes my header to have a hero image and a profile section */
 .flex{
     display: flex;
     
 }
+
+/* Adds a hero image that covers the whole screen of a hero section */
 .flex-1{
     flex: 2;
     background-image: url(/src/media/heroImage.jpeg);
@@ -27,50 +32,70 @@ body{
     justify-content: center;
     
 }
-#info, #linking{
-    padding-top: 20px;
-}
+
+/* Makes the heading bigger */
 .flex-1 h1{
     font-size: xx-large;
 }
+
+/* The profile section takes the smaller size than the hero section */
 .flex-2{
     flex: 1;
 }
+
+/* An email link color will be white */
 .flex-2 a{
     color: white
 }
+
+/* When hovering the email link it, the color changes to black */
 .flex-2 a:hover{
     color: black;
 }
+
+/* This extends the space between for better user experience */
+#info, #linking{
+    padding-top: 20px;
+}
+
+
 /* --------------------------------------------NAVIGATION BAR------------------------------------------------- */
-/*  */
+
+/* List-style of the navigation bar will be set to none */
 .nav ul{
     margin:0;
     padding: 15PX;
     list-style: none;
 }
+
+/* Lists will be in an inline-block */
 .nav li{
     display: inline-block;
     margin-right: 150px;
 }
+
+/* All decoration around links in the navigation bar will be set to none */
 .nav a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 10px;
 }
-/* ------------DROP-DOWN MENU--------------- */
+
+/* ---------------------------------------DROP-DOWN MENU INSIDE ACCOUNTS LIST---------------------------------- */
+
+/* Firstly it will be invisible with the absolute positioning */
 .dropdown-content{
     display: none;
     position: absolute;
     z-index: 1;
 }
 
+/* Lists are in a block display */
 .dropdown-content li{
     display: block;
 }
-.dropdown-content a:hover{
-    color: blue
-}
+
+/* The decoration is also none and in a block display */
 .dropdown-content a{
     display:block;
     background-color: rgb(251, 251, 251);
@@ -78,65 +103,86 @@ body{
     text-decoration: none;
     padding: 10px;
 }
+
+/* This code allows a user when hovering on a account bar to disply all the menu */
 .dropdown:hover .dropdown-content{
     display: block;
 }
+
+/* The hovering focuses inside the drop-down menu only */
 .dropdown:focus-within .dropdown-content{
     display: block;
 }
 /* ----------------------------------------------------------------------------------------------------------------------- */
 
-/*-------------------- ARTICLE-------- */
-.article .education{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: repeat(4,);
-    column-gap: 1rem;
-}
+/*------------------------------------------------------ ARTICLE---------------------------------------------------------- */
 
+/* Displays the icon images in three size grid and leaves spaces between */
 .grid-line{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
 }
+
+/* The education class in an article displays the content in grid with three equal columns and four rows having a space between */
+.article .education{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    column-gap: 1rem;
+}
+
+/* Creates borders */
 .edu {
     border: 5px solid rgb(0, 0, 0);
    
 }
-.article .grid-line, img{
-    text-align: center;
-}
-.article .icon{
+
+/* Centers */
+.article .grid-line, img, .icon{
     text-align: center;
 }
 
+
 /* -----------------------------------------PROFICIENCY----------------------------------------------- */
+
+/* Displays the grid and the first column takes double of the total row */
 .proficiency{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(3,);
 }
+
+/* The 1st child in pro class spans twice */
 .proficiency .pro:nth-child(1){
     grid-column: span 2;
 }
+
+/* The 2nd child in pro class spans once */
 .proficiency .pro:nth-child(2){
     grid-column: span 1;
 }
+
+/* The 3rd child in pro class spans once */
 .proficiency .pro:nth-child(3){
     grid-column: span 1;
 }
 
+/* The 4th child in pro class spans twice */
 .proficiency .pro:nth-child(4){
     grid-column: span 2;
 }
 
+/* Adds a border */
 .skills, .languages, .softwares{
     border: 5px solid black;
    
 }
+
+/* all pro classes' padding are 10 pixels */
 .pro{
     padding:10px
 }
+
+/* The id left margin is set to 85% */
 .pro #align{
     margin-left: 85%;
 }
@@ -148,41 +194,53 @@ body{
     width: 100px;
     text-align: center
 }
-/* ---------------------------------------------------------------------------------- */
+/* -----------------------------------FOOTER----------------------------------------------- */
+
+/* The background image will the same as hero image with white font */
 .footer{
     background-image: url(/src/media/heroImage.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    
 }
+
+/* There will be no list styles */
 .footer address ul li{
     list-style: none;
 }
 
+/* All color links will be white */
 .footer address ul li a, .header .name a, #socials a{
     color: white;
 }
-.footer address ul li a:hover, .header .name a:hover, .nav a:hover, #socials a:hover{
-    color: blue;
-}
 
+/* The secon flex-box will flex the quick id container and the form  */
 .flex1{
     display: flex;
 }
+
+/* The quick id will take smaller space than the form container */
 .quick-id{
     flex: 1;
 }
-.contact-me{
+
+/* The form takes the larger space in the footer section */
+.form{
     flex: 2;
 }
+
+/* The contacts section has its own background color that is similar to the body*/
 #contacts{
     background-color:#40483a;
     text-align: center;
 }
+
+/* The contacts links will be set to color white */
 #contacts a{
     color: white
 }
-#contacts a:hover{
+
+/* All hovering will be set to color black */
+#contacts a:hover, .footer a:hover{
     color: black;
 }
