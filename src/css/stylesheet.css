@@ -1,7 +1,7 @@
 /* My font famile for the whole code */
 body{
     font-family:'Times New Roman', Times, serif;
-    background-color: #40483a;
+    background-color: rgb(205, 175, 136);
 }
 /* ---------------------------------------HEADER---------------------- */
 /* Centers flexboxes */
@@ -117,6 +117,10 @@ body{
 
 /*------------------------------------------------------ ARTICLE---------------------------------------------------------- */
 
+/* The font color for the artocle will be white */
+.article{
+    color:rgb(255, 255, 255)
+}
 /* Displays the icon images in three size grid and leaves spaces between */
 .grid-line{
     display: grid;
@@ -198,9 +202,7 @@ body{
 
 /* The background image will the same as hero image with white font */
 .footer{
-    background-image: url(/src/media/heroImage.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
+   
     color: white;
 }
 
@@ -217,22 +219,30 @@ body{
 /* The secon flex-box will flex the quick id container and the form  */
 .flex1{
     display: flex;
+    background-color:#40483a;
 }
 
 /* The quick id will take smaller space than the form container */
 .quick-id{
-    flex: 1;
+    text-align: center;
 }
 
 /* The form takes the larger space in the footer section */
 .form{
-    flex: 2;
+    text-align: center;
+    border: 5px solid #40483a;
+}
+
+label{
+    width: 240px;
+    display: inline-block;
+    text-align: right;
 }
 
 /* The contacts section has its own background color that is similar to the body*/
 #contacts{
-    background-color:#40483a;
     text-align: center;
+    flex: 1
 }
 
 /* The contacts links will be set to color white */
@@ -244,3 +254,105 @@ body{
 #contacts a:hover, .footer a:hover{
     color: black;
 }
+
+ /* ---------------------------------------- MEDIA QUERY ---------------------------------------------------- */
+
+ /* FOR MOBILE */
+@media screen and (max-width: 475px) {
+    *{
+        font-size:small
+    }
+
+    .nav li{
+        display: inline;
+        margin-right: 0;
+    }
+
+    .flex{
+        display:contents
+    }
+
+    .flex-1{
+        height: 200px;
+    }
+
+    #media{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    .experience li{
+        display: inline;
+    }
+
+    .proficiency{
+        display: contents;
+    }
+
+    .pro img{
+        display: none;
+    }
+    .flex1{
+        display: contents;
+    }
+}
+
+/* ---------------------FOR TABLET--------------- */
+
+@media screen and (min-width: 476px) {
+    *{
+        font-size:medium
+    }
+
+    .flex{
+        display:contents
+    }
+
+    .flex-1{
+        height:360px;
+    }
+
+    #media{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    .proficiency{
+        display: contents;
+    }
+
+    .pro img{
+        display: none;
+    }
+}
+
+/* FOR LAPTOP */
+@media screen and (min-width: 1024px) {
+    *{
+        font-size:large
+    }
+
+    .flex-1{
+        height: 700px;
+    }
+
+    .flex{
+        display: flex;
+    }
+    #media{
+        display: contents;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+
+    .proficiency{
+        display: grid;
+    }
+
+    .pro img{
+        display: grid;
+    }
+}  
