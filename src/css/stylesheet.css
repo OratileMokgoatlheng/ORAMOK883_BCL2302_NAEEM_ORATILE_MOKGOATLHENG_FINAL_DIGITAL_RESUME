@@ -3,6 +3,7 @@ body{
     font-family:'Times New Roman', Times, serif;
     background-color: rgb(205, 175, 136);
 }
+
 /* ---------------------------------------HEADER---------------------- */
 /* Centers flexboxes */
 .pictures, .name{
@@ -81,7 +82,9 @@ body{
     padding: 10px;
 }
 
-/* ---------------------------------------DROP-DOWN MENU INSIDE ACCOUNTS LIST---------------------------------- */
+
+
+/* ---------------------------------------DROP-DOWN MENU INSIDE ACCOUNTS LIST--------------------------------------- */
 
 /* Firstly it will be invisible with the absolute positioning */
 .dropdown-content{
@@ -108,10 +111,14 @@ body{
 .dropdown:hover .dropdown-content{
     display: block;
 }
-
+/* the color font will be blue when hovering */
+.dropdown-content a:hover{
+    color:rgb(38, 0, 255)
+}
 /* The hovering focuses inside the drop-down menu only */
 .dropdown:focus-within .dropdown-content{
     display: block;
+    font-weight: bold
 }
 /* ----------------------------------------------------------------------------------------------------------------------- */
 
@@ -192,15 +199,15 @@ body{
 }
 /* -------------------------------color--------------------------- */
 #color{
-    border: 1px solid black;
+    border: 2px solid rgb(255, 255, 255);
     background-color: black;
     color: white;
     width: 100px;
-    text-align: center
+    text-align:center;
 }
 /* -----------------------------------FOOTER----------------------------------------------- */
 
-/* The background image will the same as hero image with white font */
+/* white font */
 .footer{
    
     color: white;
